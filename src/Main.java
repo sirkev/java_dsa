@@ -1,28 +1,29 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-       // ArrayList<String> arrayList = new ArrayList<>();
-        DynamicArray dynamicArray = new DynamicArray(1);
+        //Hash maps implements the Map interface
+        //they are similar to ArrayLists but with key-value pairs
+        //they store objects that need to use Wrapper Class (-concept of taking primitive data type and converting into an object)
+        //ex: (name,email), (username, userId), (country,capital)
 
-        dynamicArray.add("A");
-        dynamicArray.add("B");
-        dynamicArray.add("C");
-        dynamicArray.add("D");
-      dynamicArray.insert(0,"1");
-      dynamicArray.insert(2,"2");
-      dynamicArray.insert(4,"3");
-      dynamicArray.delete("1");
-      dynamicArray.delete("2");
-      dynamicArray.delete("3");
-      dynamicArray.delete("A");
-      dynamicArray.delete("B");
+        HashMap<String,String> countries = new HashMap<String, String>();
 
-        System.out.println(dynamicArray);
-        System.out.println("search element index:"+ dynamicArray.searchIndexOf("B"));
-        System.out.println("size: " + dynamicArray.size);
-        System.out.println("capacity: " + dynamicArray.capacity);
-        System.out.println("empty: " + dynamicArray.isEmpty());
+        //add a key and value
+        countries.put("Kenya","Nairobi");
+        countries.put("Egypt","Cairo");
+        countries.put("India","New Delhi");
+        countries.put("Russia","Moscow");
+
+        //countries.replace("Kenya","Nakuru")
+        // System.out.println(countries.containsValue("Nairobi"));
+
+        for(String i : countries.keySet()){
+            System.out.print(i + "\t" + "= ");
+            System.out.println(countries.get(i));
+        }
+
 
 
 
